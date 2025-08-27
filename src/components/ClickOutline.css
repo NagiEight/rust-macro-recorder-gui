@@ -1,0 +1,17 @@
+.white-circle {
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  animation: circleExpand 1s ease-out forwards;
+}
+
+@keyframes circleExpand {
+  0% {
+    r: 0;
+    opacity: 1;
+  }
+  100% {
+    r: 40;
+    opacity: 0;
+  }
+}
