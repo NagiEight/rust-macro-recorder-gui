@@ -6,6 +6,7 @@ import Editor from "../components/Editor.jsx";
 import { Code, X, GitPullRequest, Settings } from "lucide-react";
 import { sidePageIndex } from "../data/sidePageIndex.js";
 import { getIconComponent } from "../utils/componentMappings.jsx";
+import TopMenu from "../components/TopMenu.jsx";
 
 const MainApp = () => {
   const { activeFile, activeView, setActiveView } = useUI();
@@ -14,37 +15,7 @@ const MainApp = () => {
     <div className="bg-zinc-900 text-gray-300 w-full h-screen font-inter overflow-hidden">
       {/* Top Bar */}
       <header className="bg-zinc-800 flex items-center justify-between px-3 py-1.5 shadow-md">
-        <div className="flex items-center space-x-4 text-xs font-semibold">
-          <span className="text-blue-500">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="text-white"
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2ZM2 3V13H14V3H2Z"
-                fill="currentColor"
-              ></path>
-              <path
-                d="M3 5H13V6H3V5ZM3 8H13V9H3V8ZM3 11H13V12H3V11Z"
-                fill="currentColor"
-              ></path>
-            </svg>
-          </span>
-          <span className="text-gray-400">File</span>
-          <span className="text-gray-400">Edit</span>
-          <span className="text-gray-400">Selection</span>
-          <span className="text-gray-400">View</span>
-          <span className="text-gray-400">Go</span>
-          <span className="text-gray-400">Run</span>
-          <span className="text-gray-400">Terminal</span>
-          <span className="text-gray-400">Help</span>
-        </div>
+        <TopMenu />
         <div className="text-white text-sm font-semibold">
           {activeFile.name} - my-vscode-app - Visual Studio Code
         </div>

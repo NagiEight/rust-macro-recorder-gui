@@ -14,9 +14,9 @@ import {
   Clock,
   Layout,
 } from "lucide-react";
-import ExplorerPage from "../components/ExplorerPage.jsx";
-import SyntaxSidePage from "../components/SyntaxSidePage.jsx";
-import GraphSidePage from "../components/GraphSidePage.jsx";
+import ExplorerPage from "../components/_ExplorerPage.jsx";
+import SyntaxSidePage from "../components/_SyntaxSidePage.jsx";
+import GraphSidePage from "../components/_GraphSidePage.jsx";
 
 /**
  * A centralized mapping of icon names to their Lucide React components.
