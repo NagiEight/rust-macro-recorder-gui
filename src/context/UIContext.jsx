@@ -1,6 +1,8 @@
 // context/UIContext.jsx
 import React, { useState, createContext, useContext } from "react";
 import { fileTree } from "../data/fileTree.js";
+import { syntaxData } from "../data/syntaxData.js";
+import { sidePageIndex } from "../data/sidePageIndex.js";
 
 // 1. Define and export a Context for global state.
 const UIContext = createContext();
@@ -11,6 +13,8 @@ export const UIProvider = ({ children }) => {
     name: "App.jsx",
     content: fileTree["my-vscode-app"]["src"]["App.jsx"],
   });
+  // 'Explorer' or 'Syntax'
+  const [activeView, setActiveView] = useState("Explorer");
   const [activeFolder, setActiveFolder] = useState("src");
 
   // Helper function to get file content based on file name.
@@ -36,10 +40,14 @@ export const UIProvider = ({ children }) => {
   // The value object contains all the state and functions to be shared.
   const value = {
     activeFile,
+    activeView,
     activeFolder,
     setActiveFile,
+    setActiveView,
     setActiveFolder,
     fileTree,
+    syntaxData,
+    sidePageIndex,
     getFileContent,
   };
 

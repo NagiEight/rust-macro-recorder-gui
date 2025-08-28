@@ -1,6 +1,6 @@
 // components/Editor.jsx
 import React from "react";
-import { useUI } from "../context/UIContext";
+import { useUI } from "../context/UIContext.jsx";
 import { X } from "lucide-react";
 
 // The Editor component displays the content of the active file.

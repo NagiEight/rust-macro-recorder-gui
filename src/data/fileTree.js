@@ -10,6 +10,20 @@ export const fileTree = {
       components: {
         "Editor.jsx": `// Editor.jsx content...`,
         "Sidebar.jsx": `// Sidebar.jsx content...`,
+        "syntaxSidePage.jsx": `// syntaxSidePage.jsx content...`,
+        "GraphSidePage.jsx": `// GraphSidePage.jsx content...`,
+        "ExplorerPage.jsx": `// ExplorerPage.jsx content...`, // New file for the explorer page
+      },
+      context: {
+        "UIContext.jsx": `// UIContext.jsx content...`,
+      },
+      data: {
+        "fileTree.js": `// fileTree.js content...`,
+        "syntaxData.js": `// syntaxData.js content...`,
+        "sidePageIndex.js": `// sidePageIndex.js content...`,
+      },
+      utils: {
+        "componentMappings.jsx": `// New file to store mappings.`,
       },
       "App.jsx": `// App.jsx content...`,
       "index.css": "/* Your CSS here */",
